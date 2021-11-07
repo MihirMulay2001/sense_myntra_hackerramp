@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sense_myntra_hackerramp/static/css/main.20578062.chunk.css",
-    "main.js": "/sense_myntra_hackerramp/static/js/main.d3195e47.chunk.js",
-    "main.js.map": "/sense_myntra_hackerramp/static/js/main.d3195e47.chunk.js.map",
+    "main.js": "/sense_myntra_hackerramp/static/js/main.b3fe9608.chunk.js",
+    "main.js.map": "/sense_myntra_hackerramp/static/js/main.b3fe9608.chunk.js.map",
     "runtime-main.js": "/sense_myntra_hackerramp/static/js/runtime-main.dfb9eae4.js",
     "runtime-main.js.map": "/sense_myntra_hackerramp/static/js/runtime-main.dfb9eae4.js.map",
     "static/js/2.50fc5c36.chunk.js": "/sense_myntra_hackerramp/static/js/2.50fc5c36.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.dfb9eae4.js",
     "static/js/2.50fc5c36.chunk.js",
     "static/css/main.20578062.chunk.css",
-    "static/js/main.d3195e47.chunk.js"
+    "static/js/main.b3fe9608.chunk.js"
   ]
 }

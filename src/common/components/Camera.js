@@ -1,8 +1,8 @@
 import * as React from "react";
-import { useState, useRef } from "react"
-import {useSelector, useDispatch} from 'react-redux'
+import { useState, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import styles from "../../styles/Landing.module.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { addImage } from "../../redux/actions";
 
 import Webcam from "react-webcam";
@@ -11,7 +11,7 @@ const Camera = () => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
   const [cam, setcam] = useState(true);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -29,8 +29,8 @@ const Camera = () => {
   const videoConstraints = {
     width: 317,
     height: 336,
-    facingMode: "user",
-    //facingMode: { exact: "environment" },
+    // facingMode: "user",
+    facingMode: { exact: "environment" },
   };
   return (
     <div className={styles.came}>
@@ -54,9 +54,9 @@ const Camera = () => {
 
       {imgSrc && !cam && (
         <div>
-          <img src={imgSrc} alt=""/>
+          <img src={imgSrc} alt="" />
           <div className={styles.confirm}>
-            <Link to="/Results" >
+            <Link to="/Results">
               <button className={`${styles.landing_btn} ${styles.capture}`}>
                 Proceed
               </button>

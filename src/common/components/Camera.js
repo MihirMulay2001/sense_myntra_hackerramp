@@ -30,8 +30,8 @@ const Camera = () => {
   const videoConstraints = {
     width: 317,
     height: 336,
-     facingMode: "user",
-    //facingMode: { exact: "environment" },
+     //facingMode: "user",
+    facingMode: { exact: "environment" },
   };
   return (
     <div className={styles.came}>

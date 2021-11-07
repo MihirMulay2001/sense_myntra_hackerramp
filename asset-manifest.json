@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/sense_myntra_hackerramp/static/css/main.dc0186fe.chunk.css",
-    "main.js": "/sense_myntra_hackerramp/static/js/main.66d33cdb.chunk.js",
-    "main.js.map": "/sense_myntra_hackerramp/static/js/main.66d33cdb.chunk.js.map",
+    "main.js": "/sense_myntra_hackerramp/static/js/main.8b2dacc6.chunk.js",
+    "main.js.map": "/sense_myntra_hackerramp/static/js/main.8b2dacc6.chunk.js.map",
     "runtime-main.js": "/sense_myntra_hackerramp/static/js/runtime-main.dfb9eae4.js",
     "runtime-main.js.map": "/sense_myntra_hackerramp/static/js/runtime-main.dfb9eae4.js.map",
     "static/js/2.9d2c493c.chunk.js": "/sense_myntra_hackerramp/static/js/2.9d2c493c.chunk.js",
     "static/js/2.9d2c493c.chunk.js.map": "/sense_myntra_hackerramp/static/js/2.9d2c493c.chunk.js.map",
     "index.html": "/sense_myntra_hackerramp/index.html",
     "static/css/main.dc0186fe.chunk.css.map": "/sense_myntra_hackerramp/static/css/main.dc0186fe.chunk.css.map",
-    "static/js/2.9d2c493c.chunk.js.LICENSE.txt": "/sense_myntra_hackerramp/static/js/2.9d2c493c.chunk.js.LICENSE.txt"
+    "static/js/2.9d2c493c.chunk.js.LICENSE.txt": "/sense_myntra_hackerramp/static/js/2.9d2c493c.chunk.js.LICENSE.txt",
+    "static/media/illustration1.658715f9.png": "/sense_myntra_hackerramp/static/media/illustration1.658715f9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dfb9eae4.js",
     "static/js/2.9d2c493c.chunk.js",
     "static/css/main.dc0186fe.chunk.css",
-    "static/js/main.66d33cdb.chunk.js"
+    "static/js/main.8b2dacc6.chunk.js"
   ]
 }

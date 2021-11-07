@@ -5,11 +5,10 @@ import { ItemType } from '../types'
 //import { image } from '../assets/sample-test'
 
 
-const useFetcher = (url:string) => {
+const useFetcher = (url:string, type :string) => {
     const [data, setData] = useState<ItemType[]>([])
     const [error, setError] = useState<any>(null)
     const [loading, setLoading] = useState<boolean>(true)
-    const dispatch = useDispatch()
     const itemsList = useSelector((state : any) => state.itemsList)
     const image = useSelector((state : any) => state.image)
     //data:image/jpeg;base64,
@@ -21,24 +20,24 @@ const useFetcher = (url:string) => {
         const fetchData = async () => {
             try{
                 setLoading(true);
-                if(itemsList.length < 1)
+                if(itemsList.similar < 1 || itemsList.matching < 1)
                 {
-                const dataItems = await fetch('https://myntra-sense-backend.herokuapp.com/item/findSimilarItems',{
-                    method: "POST",
-                    body: JSON.stringify(imageData),
-                    headers: {
-                        'Content-Type':'application/json'
-                    }
-                });
-                
-                const dataJson = await dataItems.json();
-                console.log(dataJson.itemsArray);
-                dispatch(addItemList(dataJson.itemsArray))
-                setData(dataJson.itemsArray)
-            }
-            else{
-                setData(itemsList)
-            }
+                    console.log("aloo");
+                    
+                    const dataItems = await fetch(url,{
+                        method: "POST",
+                        body: JSON.stringify(imageData),
+                        headers: {
+                            'Content-Type':'application/json'
+                        }
+                    });
+                    const dataJson = await dataItems.json();
+                    console.log(type,dataJson.itemsArray);
+                    setData(dataJson.itemsArray)
+                }
+                else{
+                    setData(itemsList[type])
+                }
             }catch(e) {
                 setError(e);
                 console.log(e);

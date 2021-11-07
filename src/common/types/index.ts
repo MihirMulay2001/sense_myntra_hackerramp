@@ -17,3 +17,8 @@ export type CartStateType = {
     size: string,
     fit ?: string
 }
+
+export type ItemsList = {
+    similar: ItemType[],
+    matching: ItemType[]
+}

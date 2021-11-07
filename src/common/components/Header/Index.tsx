@@ -8,7 +8,7 @@ function Index() {
     return (
         <div className={styles.header}>
             <Link to="/Cart">
-                <HiShoppingCart />
+                <HiShoppingCart className={styles.icon} />
             </Link>
         </div>
     )

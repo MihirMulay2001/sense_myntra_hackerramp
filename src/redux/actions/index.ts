@@ -19,9 +19,10 @@ export const modifyItem = (id :string  | string[], change : number) =>({
 
 
 
-export const addItemList = (itemList : ItemType[]) => ({
+export const addItemList = (matchType:string, itemList : ItemType[]) => ({
     type: ADD_ITEM_LIST,
-    itemList: itemList
+    itemList: itemList,
+    matchType
 })
 
 export const addImage = (image : string) => ({

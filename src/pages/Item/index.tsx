@@ -1,23 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 //import SampleImage from '../../common/assets/sample-image.jpg'
 import { useSelector } from 'react-redux'
 //import useRouting from '../../common/hooks/useRouting'
 import { useParams } from 'react-router-dom'
 import Header from '../../common/components/Header/Index'
 import useModifyCart from '../../common/hooks/useModifyCart'
-import { ItemType } from '../../common/types'
+import { ItemsList } from '../../common/types'
 import styles from '../../styles/Item.module.css'
+//import { useNavigate } from "react-router-dom"
 
 
 export default function Item() {
-    const itemList: ItemType[] = useSelector((state: any) => state.itemsList)
+    const itemList: ItemsList = useSelector((state: any) => state.itemsList)
+    console.log(itemList);
+
     const props = useParams().id
     const id = props !== undefined ? props : ''
     //const id = window.location.pathname.split('/')[2]
-
+    //window.location.reload(false)
     const [size, setSize] = useState('m')
-    const data: any = itemList.find(item => item._id === id)
+    let data: any = itemList.similar.find(item => item._id === id)
+    if (data === undefined || data === null) {
+        data = itemList.matching.find(item => item._id === id)
+    }
     const { addItem, modifyItemQuantity, itemQuantity } = useModifyCart(id)
+
     const handleClick = (value: string) => {
         setSize(value)
     }
@@ -38,7 +45,7 @@ export default function Item() {
             <Header />
             <div className={styles.container} >
                 <div className={styles.image}>
-                    <img src={data.imageUrl} alt="item" width="355" height="325" />
+                    <img src={data.imageUrl} alt="item" width="330" height="330" />
                 </div>
                 <div className={styles.brand}>{data.brand}</div>
                 <div className={styles.label}>{data.label}</div>
